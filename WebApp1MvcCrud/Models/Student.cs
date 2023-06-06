@@ -11,7 +11,7 @@ namespace WebApp1MvcCrud.Models
         public string Lastname { get; set; } = string.Empty;
         public short Age { get; set; }
         public DateTime RegDate { get; set; }     
-        public short Grade { get; set; }
+        public float Grade { get; set; }
 
 
     }
