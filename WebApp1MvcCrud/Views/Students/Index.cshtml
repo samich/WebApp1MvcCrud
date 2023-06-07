@@ -6,21 +6,21 @@
     </div>
 </div>
 
-<div class="container py-5">
+<div class="container">
 
     @if (Model != null && Model.Any())
     {
-       <table class="table">
-           <thread>
+        <table class="table table-striped">
+            <thead>
                <tr>
-                    <td>Id</td>
-                    <td>First name</td>
-                    <td>Last name</td>
-                    <td>Age</td>
-                    <td>Grade</td>
-                    <td>Registration Date</td>
+                    <th>Id</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                    <th>Registration Date</th>
                </tr>
-           </thread>
+           </thead>
            <tbody>
                @foreach (var tag in Model)
                {
@@ -30,7 +30,7 @@
                         <td>@tag.Lastname</td>
                         <td>@tag.Age</td>
                         <td>@tag.Grade</td>
-                        <td>@tag.RegDate</td>
+                        <td>@tag.RegDate.ToString("MM/dd/yyyy")</td>
                     </tr>
                }
             </tbody>
