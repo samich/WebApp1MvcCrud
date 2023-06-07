@@ -1,0 +1,43 @@
+﻿@model List<WebApp1MvcCrud.Models.Student>
+
+<div class="container py-5">
+    <div class="container">
+        <h1>Students List</h1>
+    </div>
+</div>
+
+<div class="container py-5">
+
+    @if (Model != null && Model.Any())
+    {
+       <table class="table">
+           <thread>
+               <tr>
+                    <td>Id</td>
+                    <td>First name</td>
+                    <td>Last name</td>
+                    <td>Age</td>
+                    <td>Grade</td>
+                    <td>Registration Date</td>
+               </tr>
+           </thread>
+           <tbody>
+               @foreach (var tag in Model)
+               {
+                    <tr>
+                        <td>@tag.Id</td>
+                        <td>@tag.Firstname</td>
+                        <td>@tag.Lastname</td>
+                        <td>@tag.Age</td>
+                        <td>@tag.Grade</td>
+                        <td>@tag.RegDate</td>
+                    </tr>
+               }
+            </tbody>
+       </table>    
+    }
+    else
+    {
+        
+    }
+</div>
