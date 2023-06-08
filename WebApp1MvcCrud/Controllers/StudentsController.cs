@@ -21,5 +21,24 @@ namespace WebApp1MvcCrud.Controllers
 
             return View(students);
         }
+
+        [HttpGet]
+        public IActionResult Add()
+        {
+
+            ViewBag.asd = "Viewbag data";
+            return View();
+        }
+
+        [HttpPost]
+        [ActionName("Add")]
+        public IActionResult SubmitForm()
+        {
+
+            var firstName = Request.Form["firstName"];
+            var lastName = Request.Form["lastName"];
+
+            return View("Add");
+        }
     }
 }
