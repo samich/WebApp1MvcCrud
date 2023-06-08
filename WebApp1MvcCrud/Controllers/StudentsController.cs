@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApp1MvcCrud.Data;
 using WebApp1MvcCrud.Models;
+using WebApp1MvcCrud.Models.ViewModels;
 
 namespace WebApp1MvcCrud.Controllers
 {
@@ -32,11 +33,11 @@ namespace WebApp1MvcCrud.Controllers
 
         [HttpPost]
         [ActionName("Add")]
-        public IActionResult SubmitForm()
+        public IActionResult SubmitForm(AddStudentRequest request)
         {
 
-            var firstName = Request.Form["firstName"];
-            var lastName = Request.Form["lastName"];
+            var firstName = request.FirstName;
+            var lastName = request.LastName;
 
             return View("Add");
         }

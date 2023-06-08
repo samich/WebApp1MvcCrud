@@ -1,4 +1,6 @@
-﻿<div class="container mt-4">
+﻿@model WebApp1MvcCrud.Models.ViewModels.AddStudentRequest;
+
+<div class="container mt-4">
     <h1>Add New Student</h1>
 </div>
 
@@ -7,22 +9,22 @@
 
         <div class="mb-4">
             <label class="form-label">First name</label>
-            <input type="text" class="form-control" name="firstName" />
+            <input type="text" class="form-control" asp-for="FirstName" />
         </div>
 
         <div class="mb-4">
             <label class="form-label">Last name</label>
-            <input type="text" class="form-control" name="lastName" />
+            <input type="text" class="form-control" asp-for="LastName" />
         </div>
 
         <div class="mb-4">
             <label class="form-label">Age</label>
-            <input type="text" class="form-control" name="age" />
+            <input type="text" class="form-control" asp-for="Age" />
         </div>
 
         <div class="mb-4">
             <label class="form-label">Grade</label>
-            <input type="text" class="form-control" name="grade" />
+            <input type="text" class="form-control" asp-for="Grade" />
         </div>
 
         <div class="mb-4">
