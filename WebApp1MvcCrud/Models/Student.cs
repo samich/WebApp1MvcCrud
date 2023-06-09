@@ -6,9 +6,9 @@ namespace WebApp1MvcCrud.Models
     {
 
         [Key]
-        public int Id { get; set; }
-        public string Firstname { get; set; } = string.Empty;
-        public string Lastname { get; set; } = string.Empty;
+        public Guid Id { get; set; }
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
         public short Age { get; set; }
         public DateTime RegDate { get; set; }     
         public float Grade { get; set; }

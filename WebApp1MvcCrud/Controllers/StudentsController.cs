@@ -36,8 +36,18 @@ namespace WebApp1MvcCrud.Controllers
         public IActionResult SubmitForm(AddStudentRequest request)
         {
 
-            var firstName = request.FirstName;
-            var lastName = request.LastName;
+            Student student = new Student
+            {
+                FirstName = request.FirstName,
+                LastName = request.LastName,
+                Age = request.Age,
+                Grade = request.Grade,
+                RegDate = DateTime.Now
+                
+            };
+
+            _context.Students.Add(student);
+            _context.SaveChanges();
 
             return View("Add");
         }

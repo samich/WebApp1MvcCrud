@@ -16,44 +16,44 @@ namespace WebApp1MvcCrud.Data
                 
                 new Student 
                 {
-                    Id = 1,
-                    Firstname = "Patricia",
-                    Lastname = "White",
+                    Id = Guid.NewGuid(),
+                    FirstName = "Patricia",
+                    LastName = "White",
                     Age = 18,
                     RegDate = DateTime.Now,
                     Grade = 3.1F
                 },
                 new Student
                 {
-                    Id = 2,
-                    Firstname = "Alejandra",
-                    Lastname = "Ferguson",
+                    Id = Guid.NewGuid(),
+                    FirstName = "Alejandra",
+                    LastName = "Ferguson",
                     Age = 21,
                     RegDate = DateTime.Now,
                     Grade = 2.85F
                 },
                 new Student
                 {
-                    Id = 3,
-                    Firstname = "Bonnie",
-                    Lastname = "Kingsley",
+                    Id = Guid.NewGuid(),
+                    FirstName = "Bonnie",
+                    LastName = "Kingsley",
                     Age = 22,
                     RegDate = DateTime.Now,
                     Grade = 2.31F
                 },
                 new Student
                 {
-                    Id = 4,
-                    Firstname = "Michelle",
-                    Lastname = "Pate",
+                    Id = Guid.NewGuid(),
+                    FirstName = "Michelle",
+                    LastName = "Pate",
                     Age = 17,
                     RegDate = DateTime.Now,
                     Grade = 3.22F
                 }, new Student
                 {
-                    Id = 5,
-                    Firstname = "Shirley ",
-                    Lastname = "Krug",
+                    Id = Guid.NewGuid(),
+                    FirstName = "Shirley ",
+                    LastName = "Krug",
                     Age = 24,
                     RegDate = DateTime.Now,
                     Grade = 3.38F

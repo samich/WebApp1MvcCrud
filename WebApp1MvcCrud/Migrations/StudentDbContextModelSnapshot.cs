@@ -24,23 +24,21 @@ namespace WebApp1MvcCrud.Migrations
 
             modelBuilder.Entity("WebApp1MvcCrud.Models.Student", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<short>("Age")
                         .HasColumnType("smallint");
 
-                    b.Property<string>("Firstname")
+                    b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<float>("Grade")
                         .HasColumnType("real");
 
-                    b.Property<string>("Lastname")
+                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -54,48 +52,48 @@ namespace WebApp1MvcCrud.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = new Guid("d0176b50-d177-4be2-97d9-565dc9f3b2a3"),
                             Age = (short)18,
-                            Firstname = "Patricia",
+                            FirstName = "Patricia",
                             Grade = 3.1f,
-                            Lastname = "White",
-                            RegDate = new DateTime(2023, 6, 5, 20, 18, 40, 86, DateTimeKind.Local).AddTicks(5680)
+                            LastName = "White",
+                            RegDate = new DateTime(2023, 6, 8, 13, 30, 11, 417, DateTimeKind.Local).AddTicks(2917)
                         },
                         new
                         {
-                            Id = 2,
+                            Id = new Guid("aad3ff5a-82e3-457d-a2eb-0d94ce9019d8"),
                             Age = (short)21,
-                            Firstname = "Alejandra",
+                            FirstName = "Alejandra",
                             Grade = 2.85f,
-                            Lastname = "Ferguson",
-                            RegDate = new DateTime(2023, 6, 5, 20, 18, 40, 86, DateTimeKind.Local).AddTicks(5743)
+                            LastName = "Ferguson",
+                            RegDate = new DateTime(2023, 6, 8, 13, 30, 11, 417, DateTimeKind.Local).AddTicks(2961)
                         },
                         new
                         {
-                            Id = 3,
+                            Id = new Guid("06b8f4cf-bef7-4152-bc78-b78f97c74e09"),
                             Age = (short)22,
-                            Firstname = "Bonnie",
+                            FirstName = "Bonnie",
                             Grade = 2.31f,
-                            Lastname = "Kingsley",
-                            RegDate = new DateTime(2023, 6, 5, 20, 18, 40, 86, DateTimeKind.Local).AddTicks(5747)
+                            LastName = "Kingsley",
+                            RegDate = new DateTime(2023, 6, 8, 13, 30, 11, 417, DateTimeKind.Local).AddTicks(2966)
                         },
                         new
                         {
-                            Id = 4,
+                            Id = new Guid("81a0fe29-be21-411d-a4c4-b0dd503fbdd4"),
                             Age = (short)17,
-                            Firstname = "Michelle",
+                            FirstName = "Michelle",
                             Grade = 3.22f,
-                            Lastname = "Pate",
-                            RegDate = new DateTime(2023, 6, 5, 20, 18, 40, 86, DateTimeKind.Local).AddTicks(5751)
+                            LastName = "Pate",
+                            RegDate = new DateTime(2023, 6, 8, 13, 30, 11, 417, DateTimeKind.Local).AddTicks(2969)
                         },
                         new
                         {
-                            Id = 5,
+                            Id = new Guid("4106915c-e7f3-4b93-955f-f740e406bc96"),
                             Age = (short)24,
-                            Firstname = "Shirley ",
+                            FirstName = "Shirley ",
                             Grade = 3.38f,
-                            Lastname = "Krug",
-                            RegDate = new DateTime(2023, 6, 5, 20, 18, 40, 86, DateTimeKind.Local).AddTicks(5755)
+                            LastName = "Krug",
+                            RegDate = new DateTime(2023, 6, 8, 13, 30, 11, 417, DateTimeKind.Local).AddTicks(2984)
                         });
                 });
 #pragma warning restore 612, 618
