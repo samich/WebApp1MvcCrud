@@ -19,18 +19,20 @@
                     <th>Age</th>
                     <th>Grade</th>
                     <th>Registration Date</th>
+                    <th></th>
                </tr>
            </thead>
            <tbody>
-               @foreach (var tag in Model)
+               @foreach (var student in Model)
                {
                     <tr>
-                        <td>@tag.Id</td>
-                        <td>@tag.FirstName</td>
-                        <td>@tag.LastName</td>
-                        <td>@tag.Age</td>
-                        <td>@tag.Grade</td>
-                        <td>@tag.RegDate.ToString("MM/dd/yyyy")</td>
+                        <td>@student.Id</td>
+                        <td>@student.FirstName</td>
+                        <td>@student.LastName</td>
+                        <td>@student.Age</td>
+                        <td>@student.Grade</td>
+                        <td>@student.RegDate.ToString("MM/dd/yyyy")</td>
+                        <td><a asp-area="" asp-controller="Students" asp-action="Edit" asp-route-id="@student.Id">Edit</a></td>
                     </tr>
                }
             </tbody>
