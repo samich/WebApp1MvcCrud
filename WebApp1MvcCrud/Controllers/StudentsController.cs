@@ -10,8 +10,8 @@ namespace WebApp1MvcCrud.Controllers
 
         private StudentDbContext _context;
 
-        public StudentsController(StudentDbContext studentDbContext) 
-        { 
+        public StudentsController(StudentDbContext studentDbContext)
+        {
             _context = studentDbContext;
         }
 
@@ -43,17 +43,17 @@ namespace WebApp1MvcCrud.Controllers
                 Age = request.Age,
                 Grade = request.Grade,
                 RegDate = DateTime.Now
-                
             };
 
             _context.Students.Add(student);
             _context.SaveChanges();
 
+
             return View("Add");
         }
 
         [HttpGet]
-        public IActionResult Edit(Guid Id) 
+        public IActionResult Edit(Guid Id)
         {
             var student = _context.Students.FirstOrDefault(x => x.Id == Id);
 
@@ -71,8 +71,8 @@ namespace WebApp1MvcCrud.Controllers
 
                 return View(editStudentRequest);
             }
-            
-            
+
+
             return View();
         }
 
@@ -82,7 +82,7 @@ namespace WebApp1MvcCrud.Controllers
 
             Student student = new Student
             {
-                Id  = request.Id,
+                Id = request.Id,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 Age = request.Age,
@@ -94,7 +94,7 @@ namespace WebApp1MvcCrud.Controllers
 
             if (existingStudent != null) {
 
-                existingStudent.FirstName = student.FirstName; 
+                existingStudent.FirstName = student.FirstName;
                 existingStudent.LastName = student.LastName;
                 existingStudent.Age = student.Age;
                 existingStudent.Grade = student.Grade;
@@ -103,9 +103,27 @@ namespace WebApp1MvcCrud.Controllers
                 return RedirectToAction("Index");
 
             }
-            
+
             //if there is no record in db, display error            
             return View("Edit", new { Id = request.Id });
+        }
+
+        [HttpPost]
+        public IActionResult Delete(EditStudentRequest editStudentRequest) {
+
+            var student = _context.Students.Find(editStudentRequest.Id);
+
+            if (student != null) {
+
+                _context.Students.Remove(student);
+                _context.SaveChanges();
+
+                //show success message
+                return RedirectToAction("Index");
+            }
+
+
+            return RedirectToAction("Edit");
         }
     }
 
