@@ -5,4 +5,3 @@
 -   [ ] ASP.NET Core MVC
 -   [ ] Entity Framework Core 8.0
 -   [ ] .NET 8.0
-
