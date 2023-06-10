@@ -49,7 +49,7 @@ namespace WebApp1MvcCrud.Controllers
             _context.SaveChanges();
 
 
-            return View("Add");
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
